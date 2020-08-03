@@ -1,4 +1,7 @@
 class Pessoa:
+    #A criação do atributo default, deve ficar fora do método def__init__
+    #exemplo = olhos=2
+    olhos = 2
     def __init__(self, *filhos, nome=None, idade=35):
         #Atributo nome é = self.nome
         # e abaixo eu passo o valor do atributo nome o valor do parametro nome
@@ -28,3 +31,14 @@ if __name__== '__main__':
     #exemplo: del luciano.filhos
     #print(luciano.filhos)
     #O __dict__ exibe todos os atributos daquele atributos de instancia de um objeto exemplo print(luciano.__dict__)
+    luciano.sobrenome = 'Ramalho'
+    del luciano.filhos
+    luciano.olhos = 1
+    del luciano.olhos
+    print(renzo.__dict__)
+    print(luciano.__dict__)
+    Pessoa.olhos = 3
+    print(Pessoa.olhos)
+    print(luciano.olhos)
+    print(renzo.olhos)
+    print(id(Pessoa.olhos), id(luciano.olhos), id(renzo.olhos))
