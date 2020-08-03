@@ -22,4 +22,9 @@ if __name__== '__main__':
     print(luciano.idade)
     for filho in luciano.filhos:
         print(filho.nome)
+    #Adicionando atributos Dinamicamente     Obs.: Não costuma ser uma boa prática.
+    #exemplo: luciano.sobrenome = 'Ramalho '
+    #Remover atributos Dinamicamente         bs.: Não costuma ser uma boa prática.
+    #exemplo: del luciano.filhos
     #print(luciano.filhos)
+    #O __dict__ exibe todos os atributos daquele atributos de instancia de um objeto exemplo print(luciano.__dict__)
